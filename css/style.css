@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+  --clr-blk: #000;
+  --clr-blk1: #2b2b2b;
+  --clr-wht: #fff;
+  --clr-cl: #33f321;
+  --clr-cl1: #a5fc9d;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--clr-blk);
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: var(--clr-cl);
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: center;
+  letter-spacing: 4px;
+  border-radius: 3px;
+  background: var(--clr-blk1);
+  transition: all 0.2s ease;
+  transform-origin: 0 100%;
+  cursor: pointer; 
+}
+
+.button {
+  text-shadow: 0 1px 5px var(--clr-cl1),
+               0 0 15px var(--clr-cl1);
+  border: 3px solid var(--clr-cl1);
+  box-shadow: 0 0 10px var(--clr-cl),
+              0 0 40px var(--clr-cl),
+        inset 0 0 2px var(--clr-cl1),
+        inset 0 0 7px var(--clr-cl);
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  color: var(--clr-wht);
+  text-shadow: 0 0 10px var(--clr-cl1),
+               0 0 15px var(--clr-cl1);
+  background: var(--clr-cl);
+  box-shadow: 0 0 10px var(--clr-cl),
+              0 0 40px var(--clr-cl),
+              0 0 80px var(--clr-cl);
+  border: none; 
+  opacity: 1;
+  animation: animate 1s ease-in-out 1;
+}
+
+@keyframes animate {
+  15% {
+    transform: skew(-12deg);
+  }
+  30% {
+    transform: skew(10deg);
+  }
+  50% {
+    transform: skew(-6deg);
+  }
+  65% {
+    transform: skew(4deg);
+  }
+  80% {
+    transform: skew(-2deg);
+  }
+  100% {
+    transform: skew(0);
+  }
+}
+
+.button::before { 
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 90%;
+  top: 250%;
+  left: 5%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(51, 243, 33, 0.5) 0%, transparent 80%);
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
+
+.button:hover::before,
+.button:focus::before,
+.button:active::before {
+  opacity: 1;
+}
