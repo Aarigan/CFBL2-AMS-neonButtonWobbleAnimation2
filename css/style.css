@@ -32,7 +32,7 @@ body {
 button {
   position: relative;
   display: inline-block;
-  padding: 15px 30px;
+  padding: .938em 1.875em;
   color: var(--clr-cl);
   font-family: 'Shadows Into Light', cursive;
   font-size: 2em;
@@ -41,8 +41,8 @@ button {
   text-transform: uppercase;
   text-align: center;
   vertical-align: center;
-  letter-spacing: 4px;
-  border-radius: 3px;
+  letter-spacing: .25em;
+  border-radius: .188em;
   background: var(--clr-blk1);
   transition: all 0.2s ease;
   transform-origin: 0 100%;
@@ -50,25 +50,25 @@ button {
 }
 
 .button {
-  text-shadow: 0 1px 5px var(--clr-cl1),
-               0 0 15px var(--clr-cl1);
-  border: 3px solid var(--clr-cl1);
-  box-shadow: 0 0 10px var(--clr-cl),
-              0 0 40px var(--clr-cl),
-        inset 0 0 2px var(--clr-cl1),
-        inset 0 0 7px var(--clr-cl);
+  text-shadow: 0 .063em .313em var(--clr-cl1),
+               0 0 .938em var(--clr-cl1);
+  border: .188em solid var(--clr-cl1);
+  box-shadow: 0 0 .625em var(--clr-cl),
+              0 0 2.5em var(--clr-cl),
+        inset 0 0 .125em var(--clr-cl1),
+        inset 0 0 .438 var(--clr-cl);
 }
 
 .button:hover,
 .button:focus,
 .button:active {
   color: var(--clr-wht);
-  text-shadow: 0 0 10px var(--clr-cl1),
-               0 0 15px var(--clr-cl1);
+  text-shadow: 0 0 .625em var(--clr-cl1),
+               0 0 .938em var(--clr-cl1);
   background: var(--clr-cl);
-  box-shadow: 0 0 10px var(--clr-cl),
-              0 0 40px var(--clr-cl),
-              0 0 80px var(--clr-cl);
+  box-shadow: 0 0 .625em var(--clr-cl),
+              0 0 2.5em var(--clr-cl),
+              0 0 5.0em var(--clr-cl);
   border: none; 
   opacity: 1;
   animation: animate 1s ease-in-out 1;
@@ -98,7 +98,7 @@ button {
 .button::before { 
   content: '';
   position: absolute;
-  height: 20px;
+  height: 1.25em;
   width: 90%;
   top: 250%;
   left: 5%;
