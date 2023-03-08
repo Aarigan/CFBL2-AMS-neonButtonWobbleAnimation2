@@ -44,6 +44,7 @@ button {
   letter-spacing: .25em;
   border-radius: .188em;
   background: var(--clr-blk1);
+  /* outline-color: transparent; */
   transition: all 0.2s ease;
   transform-origin: 0 100%;
   cursor: pointer; 
